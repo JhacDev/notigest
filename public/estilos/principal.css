@@ -1,0 +1,34 @@
+#nombre_estilo {
+	color: #004470;
+}
+#dis_estilo {
+	color: #2C719E;
+}
+#imagen {
+		max-width: 200px; 
+		height: 200px;
+	}
+
+
+	
+	/*
+@media screen and (min-width: 980px) {
+	#imagen {
+		max-width: 20%; 
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	#imagen {
+		max-width: 30%; 
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#imagen {
+		max-width: 50%; 
+		height: auto;
+	}
+}*/

@@ -1,0 +1,66 @@
+/*=======================================================================================
+=            Quitar padding a los botones de Anterior, Siguiente de la tabla            =
+=======================================================================================*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding : 0px;
+    margin-left: 0px;
+    display: inline;
+    border: 0px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    border: 0px;
+}
+
+/*==============================================
+=            Encabezado de la tabla            =
+==============================================*/
+#tblistado th {
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #175B27;
+    vertical-align: middle;
+}
+
+/*=============================================
+=            Personalizar la tabla            =
+=============================================*/
+/*centrar columnas*/
+#tblistado td:nth-child(1), #tblistado td:nth-child(3), #tblistado td:nth-child(6), #tblistado td:nth-child(8) {
+    text-align: center;
+}
+/*cambiar de color al momento de pasar el mouse encima de una fila de la tabla*/
+tr:hover td{
+    background:#D1FFDB;
+}
+/*cambiar el alto de las filas de la tabla*/
+#tblistado td:nth-child(1), #tblistado td:nth-child(2), #tblistado td:nth-child(3), #tblistado td:nth-child(4), #tblistado td:nth-child(5), #tblistado td:nth-child(6), #tblistado td:nth-child(7), #tblistado td:nth-child(8) {
+    padding: 0;
+    height: 30px;
+
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 15px;
+}
+/*cambiar el padding izquierdo de la columna*/
+#tblistado td:nth-child(2), #tblistado td:nth-child(4), #tblistado td:nth-child(5), #tblistado td:nth-child(6) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+/* cambiar el estilo de las columnas*/
+#tblistado td:nth-child(8) {
+    font-weight: bold;
+}
+
+/*================================================
+=            Personalizar los select2            =
+================================================*/
+.select2-container--default .select2-selection--single{
+    background: #FFFFFF;
+}
+.select2-container .select2-selection--single .select2-selection__rendered{
+    background-color: #FFFFFF;
+}
+.select2-container--default.select2-container--disabled .select2-selection--single{
+    background-color: #FFFFFF;
+}

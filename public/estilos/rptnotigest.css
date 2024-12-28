@@ -1,0 +1,87 @@
+/*=======================================================================================
+=            Quitar padding a los botones de Anterior, Siguiente de la tabla            =
+=======================================================================================*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding : 0px;
+    margin-left: 0px;
+    display: inline;
+    border: 0px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    border: 0px;
+}
+
+/*==============================================
+=            Encabezado de la tabla            =
+==============================================*/
+#tblistado_notigest th {
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: #175B27;
+    vertical-align: middle;
+}
+
+/*=============================================
+=            Personalizar la tabla            =
+=============================================*/
+/*centrar columnas*/
+#tblistado_notigest td:nth-child(3), #tblistado_notigest td:nth-child(5), #tblistado_notigest td:nth-child(6), #tblistado_notigest td:nth-child(7), #tblistado_notigest td:nth-child(11), #tblistado_notigest td:nth-child(12), #tblistado_notigest td:nth-child(13), #tblistado_notigest td:nth-child(14), #tblistado_notigest td:nth-child(15), #tblistado_notigest td:nth-child(16), #tblistado_notigest td:nth-child(17), #tblistado_notigest td:nth-child(18), #tblistado_notigest td:nth-child(20), #tblistado_notigest td:nth-child(21), #tblistado_notigest td:nth-child(22), #tblistado_notigest td:nth-child(24), #tblistado_notigest td:nth-child(25), #tblistado_notigest td:nth-child(26) {
+    text-align: center;
+}
+/*cambiar de color al momento de pasar el mouse encima de una fila de la tabla*/
+tr:hover td{
+    background:#D1FFDB;
+}
+/*cambiar el alto de las filas de la tabla*/
+#tblistado_notigest td:nth-child(1), #tblistado_notigest td:nth-child(2), #tblistado_notigest td:nth-child(3), #tblistado_notigest td:nth-child(4), #tblistado_notigest td:nth-child(5), #tblistado_notigest td:nth-child(6), #tblistado_notigest td:nth-child(7), #tblistado_notigest td:nth-child(8), #tblistado_notigest td:nth-child(9), #tblistado_notigest td:nth-child(10),#tblistado_notigest td:nth-child(11), #tblistado_notigest td:nth-child(12), #tblistado_notigest td:nth-child(13), #tblistado_notigest td:nth-child(14), #tblistado_notigest td:nth-child(15), #tblistado_notigest td:nth-child(16), #tblistado_notigest td:nth-child(17), #tblistado_notigest td:nth-child(18), #tblistado_notigest td:nth-child(19), #tblistado_notigest td:nth-child(20),#tblistado_notigest td:nth-child(21), #tblistado_notigest td:nth-child(22), #tblistado_notigest td:nth-child(23), #tblistado_notigest td:nth-child(24), #tblistado_notigest td:nth-child(25), #tblistado_notigest td:nth-child(26), #tblistado_notigest td:nth-child(27), #tblistado_notigest td:nth-child(28), #tblistado_notigest td:nth-child(29), #tblistado_notigest td:nth-child(30), #tblistado_notigest td:nth-child(31) {
+    padding: 0;
+    height: 30px;
+
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 15px;
+}
+/*cambiar el padding izquierdo de la columna*/
+#tblistado_notigest td:nth-child(1), #tblistado_notigest td:nth-child(2), #tblistado_notigest td:nth-child(4), #tblistado_notigest td:nth-child(8), #tblistado_notigest td:nth-child(9), #tblistado_notigest td:nth-child(10), #tblistado_notigest td:nth-child(19), #tblistado_notigest td:nth-child(23), #tblistado_notigest td:nth-child(27), #tblistado_notigest td:nth-child(28), #tblistado_notigest td:nth-child(29), #tblistado_notigest td:nth-child(30), #tblistado_notigest td:nth-child(31) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+/* cambiar el estilo de las columnas*/
+#tblistado_notigest td:nth-child(4), #tblistado_notigest td:nth-child(11), #tblistado_notigest td:nth-child(13) {
+    font-weight: bold;
+}
+#tblistado_notigest td:nth-child(12) {
+    font-style: italic;
+}
+
+/*===============================================
+=            Personalizar los inputs            =
+===============================================*/
+/*Cambiar el fondo de los input desactivados*/
+input#fpp_min, input#fpp_max, input#edad_min, input#edad_max {
+    background: white;
+}
+
+/*================================================
+=            Personalizar los select2            =
+================================================*/
+.select2-container--default .select2-selection--single{
+    background: #FFFFFF;
+}
+.select2-container .select2-selection--single .select2-selection__rendered{
+    background-color: #FFFFFF;
+}
+.select2-container--default.select2-container--disabled .select2-selection--single{
+    background-color: #FFFFFF;
+}
+
+/*==================================================
+=            Personalizar lina vertical            =
+==================================================*/
+div.vl{ 
+    width: 0px; 
+    height: 100%; 
+    float: left; 
+    border: 1px inset;
+}
