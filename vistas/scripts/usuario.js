@@ -982,8 +982,4 @@ function soloNumeros(e) {
 
 }
 
-
-
-
-
 init();
