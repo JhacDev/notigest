@@ -199,7 +199,7 @@ if (strlen(session_id()) < 1) {
 						</li>
 						<li class="nav-item">
 
-							<a href="frm_principaluser.php" class="nav-link active">
+							<a href="frm_principaluser.php" class="nav-link">
 
 								<!-- <i class="nav-icon fas fa-cube"></i> -->
 								<div class="d-flex align-items-center">
@@ -227,6 +227,22 @@ if (strlen(session_id()) < 1) {
 									</div>
 									<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
 										Reg. Nominal
+									</p>
+								</div>
+							</a>
+
+						</li>
+						<li class="nav-item">
+
+							<a href="frm_reporteuser.php" class="nav-link">
+
+								<!-- <i class="nav-icon fas fa-cube"></i> -->
+								<div class="d-flex align-items-center">
+									<div class="image">
+										<img src="../public/imagenes/notas.png" class="img-circle elevation-2" alt="User Image" style="max-width: 34px; height: auto;">
+									</div>
+									<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
+										Rep. Nominal
 									</p>
 								</div>
 							</a>
