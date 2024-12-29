@@ -148,7 +148,7 @@ if (strlen(session_id()) < 1) {
 
 					<div class="image">
 
-						<img src="../public/imagenes/user_sidebar.png" class="img-circle elevation-2" alt="User Image">
+						<img src="../public/imagenes/rueda-dentada-64.png" class="img-circle elevation-2" alt="User Image">
 
 					</div>
 
