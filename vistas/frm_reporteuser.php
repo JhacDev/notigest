@@ -223,10 +223,12 @@ if (!isset($_SESSION['email_usuario'])) {
 											<th style="width: 3%;">Doc Profesional</th>
 											<th style="width: 3%;">Nombres Profesional</th>
 											<th style="width: 3%;">Celular Profesional</th>
+											<th style="width: 3%;">Fecha registro en el sistema</th>
 									</thead>
 									<tbody>
 									</tbody>
 									<tfoot>
+										<th></th>
 										<th></th>
 										<th></th>
 										<th></th>

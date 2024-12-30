@@ -196,7 +196,8 @@ switch ($_GET['op']) {
 
 				"37" =>	$reg->apenom_usuario,
 
-				"38" =>	$reg->numtele_usuario
+				"38" =>	$reg->numtele_usuario,
+				"39" =>	$reg-> fecha_registro
 
 
 
@@ -318,7 +319,8 @@ switch ($_GET['op']) {
 
 				"37" =>	$reg->apenom_usuario,
 
-				"38" =>	$reg->numtele_usuario
+				"38" =>	$reg->numtele_usuario,
+				"39" =>	$reg-> fecha_registro
 
 			);
 

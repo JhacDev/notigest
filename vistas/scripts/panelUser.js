@@ -839,7 +839,7 @@ const countRegisterdiaMes = async () => {
   
   
   
-              title: "Notificación de Gestantes - NOTIGEST",
+              title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
   
             },
   
@@ -857,7 +857,7 @@ const countRegisterdiaMes = async () => {
   
   
   
-              title: "Notificación de Gestantes - NOTIGEST",
+              title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
 
               excelStyles: [
 
@@ -899,9 +899,10 @@ const countRegisterdiaMes = async () => {
                 {cells: 'sAG', width: 9},
                 {cells: 'sAH', width: 18},
                 {cells: 'sAI', width: 20},
-                {cells: 'sAJ', width: 22},
+                {cells: 'sAJ', width: 11.71},
                 {cells: 'sAK', width: 30.43},
-                {cells: 'sAL', width: 26},
+                {cells: 'sAL', width: 12},
+                {cells: 'sAM', width:  17.43},
                 
                 {
 
@@ -936,22 +937,20 @@ const countRegisterdiaMes = async () => {
                 }
 
             }, {
-
-                // Fuentede todo el documento
-
-                cells: ["A3:"],
-
-                style: {
-
-                    font: { name: 'Cambria', size: '10', color: '000000', b: false },
-
-                }
-
-            }, {
+              // Fuente de todo el documento
+              cells: ["A3:"],
+              style: {
+                  font: { name: 'arial', size: '10', color: '000000', b: false },
+                  alignment: {
+                      horizontal: "left" // Alineación horizontal a la izquierda
+                  }
+              }
+          }
+          , {
 
                 // Estilo de la edad gestacional captada               
 
-                cells: 'sAE' , 
+                cells: 'sP' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [1,14] },
 
@@ -973,7 +972,7 @@ const countRegisterdiaMes = async () => {
 
             }, {               
 
-                cells: 'sAE' , 
+                cells: 'sP' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [15,27] },
 
@@ -995,7 +994,7 @@ const countRegisterdiaMes = async () => {
 
             }, {               
 
-                cells: 'sAE' , 
+                cells: 'sP' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [28,40] },
 
@@ -1018,7 +1017,7 @@ const countRegisterdiaMes = async () => {
             }, 
             {               
 
-                cells: 'sZ' , 
+                cells: 'sP' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [5,11] },
 
@@ -1041,7 +1040,7 @@ const countRegisterdiaMes = async () => {
             },
             {               
 
-                cells: 'sAE' , 
+                cells: 'sP' , 
 
                 condition: { type: 'cellIs', operator: 'greaterThan', formula: 40 },
 
@@ -1065,7 +1064,7 @@ const countRegisterdiaMes = async () => {
 
                 // Estilo de la edad gestacional actual              
 
-                cells: 'sQ' , 
+                cells: 'sAD' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [1,29] },
 
@@ -1087,7 +1086,7 @@ const countRegisterdiaMes = async () => {
 
             }, {               
 
-                cells: 'sQ' , 
+                cells: 'sAD' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [30,36] },
 
@@ -1109,7 +1108,7 @@ const countRegisterdiaMes = async () => {
 
             }, {               
 
-                cells: 'sQ' , 
+                cells: 'sAD' , 
 
                 condition: { type: 'cellIs', operator: 'between', formula: [37,41] },
 
@@ -1131,7 +1130,7 @@ const countRegisterdiaMes = async () => {
 
             }, {               
 
-                cells: 'sQ' , 
+                cells: 'sAD' , 
 
                 condition: { type: 'cellIs', operator: 'greaterThan', formula: 41 },
 
@@ -1155,9 +1154,9 @@ const countRegisterdiaMes = async () => {
 
                 // Estilo del grupo sanguíneo 
 
-                cells: "sAA",                    
+                cells: "sZ",                    
 
-                condition: { type: "expression", formula: "OR($AA3=\"A\",$AA3=\"B\",$AA3=\"AB\")" },
+                condition: { type: "expression", formula: "OR($Z3=\"A\",$Z3=\"B\",$Z3=\"AB\")" },
 
                 style: {
 
@@ -1177,9 +1176,9 @@ const countRegisterdiaMes = async () => {
 
             }, {
 
-                cells: "sAA",                    
+                cells: "sZ",                    
 
-                condition: { type: "expression", formula: "$AA3=\"O\"" },
+                condition: { type: "expression", formula: "$Z3=\"O\"" },
 
                 style: {
 
@@ -1197,37 +1196,11 @@ const countRegisterdiaMes = async () => {
 
                 }
 
-            }, {
+            },  {
 
-                // Estilo del tamizaje VIF 
+                cells: "sAC",                    
 
-                cells: "sAD",                    
-
-                condition: { type: "expression", formula: "$AD3=\"NEGATIVO\"" },
-
-                style: {
-
-                    font: { color: '09477E', b: true },
-
-                    fill: {
-
-                        pattern: {
-
-                            bgColor: 'DEEFFF'
-
-                            // width:'10px'
-
-                        }
-
-                    }
-
-                }
-
-            }, {
-
-                cells: "sAD",                    
-
-                condition: { type: "expression", formula: "$AD3=\"POSITIVO\"" },
+                condition: { type: "expression", formula: "$AC3=\"POSITIVO\"" },
 
                 style: {
 
@@ -1245,29 +1218,31 @@ const countRegisterdiaMes = async () => {
 
                 }
 
-            }, {
+            },
+            //  {
 
-                // Estilo centrado de las columnas 
+            //     // Estilo centrado de las columnas 
 
-                cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn"],
+            //     cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn","X3:Xn"],
 
-                style: {
+            //     style: {
 
-                    font: { name: 'Arial', size: '9', color: '000000', b: false },
+            //         font: { name: 'Arial', size: '9', color: '000000', b: false },
 
-                    alignment: {
+            //         alignment: {
 
-                        vertical: "center",
+            //             vertical: "center",
 
-                        horizontal: "center",
+            //             horizontal: "center",
 
-                        wrapText: true,
+            //             wrapText: true,
 
-                    }
+            //         }
 
-                }
+            //     }
 
-            }]
+            // }
+          ]
   
             },
   
@@ -1285,7 +1260,7 @@ const countRegisterdiaMes = async () => {
   
   
   
-              title: "Notificación de Gestantes - NOTIGEST",
+              title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
   
             },
   
@@ -1315,7 +1290,7 @@ const countRegisterdiaMes = async () => {
   
   
   
-              title: "Notificación de Gestantes - NOTIGEST",
+              title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
   
             },
   
@@ -1561,7 +1536,7 @@ function Listar() {
 
 
 
-            title: "Notificación de Gestantes - NOTIGEST",
+            title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
 
           },
 
@@ -1579,7 +1554,7 @@ function Listar() {
 
 
 
-            title: "Notificación de Gestantes - NOTIGEST",
+            title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
 
           },
 
@@ -1597,7 +1572,7 @@ function Listar() {
 
 
 
-            title: "Notificación de Gestantes - NOTIGEST",
+            title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
 
           },
 
@@ -1627,7 +1602,7 @@ function Listar() {
 
 
 
-            title: "Notificación de Gestantes - NOTIGEST",
+            title: "PADRON DE GESTANTES - NOTIGEST - REPORTE POR MICRORED",
 
           },
 

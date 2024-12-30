@@ -372,7 +372,7 @@ function RptGeneralNotigest() {
 
             titleAttr: 'Copiar',
 
-            title: 'Notificación de Gestantes - NOTIGEST'
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO ADMINISTRADOR'
 
         }, 
         {
@@ -383,7 +383,7 @@ function RptGeneralNotigest() {
 
             titleAttr: 'Excel',
 
-            title: 'Notificación de Gestantes - NOTIGEST',
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO ADMINISTRADOR',
 
             excelStyles: [
 
@@ -394,10 +394,10 @@ function RptGeneralNotigest() {
                 {cells: 'sB', width: 12},
                 {cells: 'sC', width: 30},
                 {cells: 'sD', width: 12},
-                {cells: 'sE', width: 10},
+                {cells: 'sE', width: 18.43},
                 {cells: 'sF', width: 5},
                 {cells: 'sG', width: 12},
-                {cells: 'sH', width: 18},
+                {cells: 'sH', width: 13.29},
                 {cells: 'sI', width: 18},
                 {cells: 'sJ', width: 20},
                 {cells: 'sK', width: 17},
@@ -429,6 +429,7 @@ function RptGeneralNotigest() {
                 {cells: 'sAK', width: 11},
                 {cells: 'sAL', width: 26},
                 {cells: 'sAM', width: 15},
+                {cells: 'sAN', width:  17.43},
                 
                 {
 
@@ -462,19 +463,19 @@ function RptGeneralNotigest() {
 
                 }
 
-            }, {
-
-                // Fuentede todo el documento
-
+            },
+            {
+                // Fuente de todo el documento
                 cells: ["A3:"],
-
                 style: {
-
-                    font: { name: 'Cambria', size: '10', color: '000000', b: false },
-
+                    font: { name: 'Arial', size: '10', color: '000000', b: false },
+                    alignment: {
+                        horizontal: "left" // Alineación horizontal a la izquierda
+                    }
                 }
-
-            }, {
+            }
+            
+            , {
 
                 // Estilo de la edad gestacional captada               
 
@@ -724,33 +725,36 @@ function RptGeneralNotigest() {
 
                 }
 
-            }, {
+            }, 
+            // {
 
-                // Estilo del tamizaje VIF 
+            //     // Estilo del tamizaje VIF 
 
-                cells: "sAD",                    
+            //     cells: "sAD",                    
 
-                condition: { type: "expression", formula: "$AD3=\"NEGATIVO\"" },
+            //     condition: { type: "expression", formula: "$AD3=\"NEGATIVO\"" },
 
-                style: {
+            //     style: {
 
-                    font: { color: '09477E', b: true },
+            //         font: { color: '09477E', b: true },
 
-                    fill: {
+            //         fill: {
 
-                        pattern: {
+            //             pattern: {
 
-                            bgColor: 'DEEFFF'
+            //                 bgColor: 'DEEFFF'
 
-                            // width:'10px'
+            //                 // width:'10px'
 
-                        }
+            //             }
 
-                    }
+            //         }
 
-                }
+            //     }
 
-            }, {
+            // }
+            // , 
+            {
 
                 cells: "sAD",                    
 
@@ -772,29 +776,31 @@ function RptGeneralNotigest() {
 
                 }
 
-            }, {
+            }, 
+            // {
 
-                // Estilo centrado de las columnas 
+            //     // Estilo centrado de las columnas 
 
-                cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn"],
+            //     cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn"],
 
-                style: {
+            //     style: {
 
-                    font: { name: 'Arial', size: '9', color: '000000', b: false },
+            //         font: { name: 'Arial', size: '9', color: '000000', b: false },
 
-                    alignment: {
+            //         alignment: {
 
-                        vertical: "center",
+            //             vertical: "center",
 
-                        horizontal: "center",
+            //             horizontal: "center",
 
-                        wrapText: true,
+            //             wrapText: true,
 
-                    }
+            //         }
 
-                }
+            //     }
 
-            }]            
+            // }
+        ]            
 
         }, 
         {
@@ -805,7 +811,7 @@ function RptGeneralNotigest() {
 
             titleAttr: 'CSV',
 
-            title: 'Notificación de Gestantes - NOTIGEST'
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO ADMINISTRADOR'
 
         }],
 
@@ -1025,7 +1031,7 @@ function RptNotigestRed() {
 
             titleAttr: 'Copiar',
 
-            title: 'Notificación de Gestantes - NOTIGEST'
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO RED'
 
         }, {
 
@@ -1035,7 +1041,7 @@ function RptNotigestRed() {
 
             titleAttr: 'Excel',
 
-            title: 'Consolidado de Gestantes por Red - NOTIGEST',
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO RED',
 
             excelStyles: [
 
@@ -1047,7 +1053,7 @@ function RptNotigestRed() {
                 {cells: 'sE', width: 10},
                 {cells: 'sF', width: 5},
                 {cells: 'sG', width: 12},
-                {cells: 'sH', width: 18},
+                {cells: 'sH', width: 13.29},
                 {cells: 'sI', width: 18},
                 {cells: 'sJ', width: 20},
                 {cells: 'sK', width: 17},
@@ -1079,6 +1085,7 @@ function RptNotigestRed() {
                 {cells: 'sAK', width: 11},
                 {cells: 'sAL', width: 26},
                 {cells: 'sAM', width: 15},
+                {cells: 'sAN', width:  17.43},
 
                 {
 
@@ -1112,19 +1119,19 @@ function RptNotigestRed() {
     
                     }
     
-                }, {
-    
-                    // Fuentede todo el documento
-    
+                },
+                {
+                    // Fuente de todo el documento
                     cells: ["A3:"],
-    
                     style: {
-    
-                        font: { name: 'Cambria', size: '10', color: '000000', b: false },
-    
+                        font: { name: 'arial', size: '10', color: '000000', b: false },
+                        alignment: {
+                            horizontal: "left" // Alineación horizontal a la izquierda
+                        }
                     }
-    
-                }, {
+                }
+                
+                , {
     
                     // Estilo de la edad gestacional captada               
     
@@ -1374,33 +1381,35 @@ function RptNotigestRed() {
     
                     }
     
-                }, {
+                }, 
+                // {
     
-                    // Estilo del tamizaje VIF 
+                //     // Estilo del tamizaje VIF 
     
-                    cells: "sAD",                    
+                //     cells: "sAD",                    
     
-                    condition: { type: "expression", formula: "$AD3=\"NEGATIVO\"" },
+                //     condition: { type: "expression", formula: "$AD3=\"NEGATIVO\"" },
     
-                    style: {
+                //     style: {
     
-                        font: { color: '09477E', b: true },
+                //         font: { color: '09477E', b: true },
     
-                        fill: {
+                //         fill: {
     
-                            pattern: {
+                //             pattern: {
     
-                                bgColor: 'DEEFFF'
+                //                 bgColor: 'DEEFFF'
     
-                                // width:'10px'
+                //                 // width:'10px'
     
-                            }
+                //             }
     
-                        }
+                //         }
     
-                    }
+                //     }
     
-                }, {
+                // }
+                {
     
                     cells: "sAD",                    
     
@@ -1422,29 +1431,31 @@ function RptNotigestRed() {
     
                     }
     
-                }, {
+                }, 
+            //     {
 
-                // Estilo centrado de las columnas 
+            //     // Estilo centrado de las columnas 
 
-                cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn"],
+            //     cells: ["C3:Cn", "E3:En", "F3:Fn", "G3:Gn", "K3:Kn", "L3:Ln", "M3:Mn", "N3:Nn", "O3:On", "P3:Pn", "T3:Tn", "U3:Un", "V3:Vn", "X3:Xn", "Y3:Yn"],
 
-                style: {
+            //     style: {
 
-                    font: { name: 'Arial', size: '9', color: '000000', b: false },
+            //         font: { name: 'Arial', size: '9', color: '000000', b: false },
 
-                    alignment: {
+            //         alignment: {
 
-                        vertical: "center",
+            //             vertical: "center",
 
-                        horizontal: "center",
+            //             horizontal: "center",
 
-                        wrapText: true,
+            //             wrapText: true,
 
-                    }
+            //         }
 
-                }
+            //     }
 
-            }]            
+            // }
+        ]            
 
         }, {
 
@@ -1454,7 +1465,7 @@ function RptNotigestRed() {
 
             titleAttr: 'CSV',
 
-            title: 'Consolidado de Gestantes por Red - NOTIGEST'
+            title: 'PADRON DE GESTANTES - NOTIGEST - REPORTE COMO RED'
 
         }],
 

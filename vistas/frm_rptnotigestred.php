@@ -216,6 +216,8 @@ if (!isset($_SESSION['email_usuario'])) {
 
 									<th style="width: 3%;">Celular Profesional</th>
 
+									<th style="width: 3%;">Fecha registro en el sistema</th>
+
 								</thead>
 
 								<tbody>							
@@ -223,6 +225,7 @@ if (!isset($_SESSION['email_usuario'])) {
 								</tbody>
 
 								<tfoot>
+									<th></th>
 
 									<th></th>
 
