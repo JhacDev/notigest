@@ -193,32 +193,11 @@ if (strlen(session_id()) < 1) {
 					<ul class="nav nav-pills nav-sidebar nav-compact nav-child-indent flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
 
-
-						<!-- <li class="nav-item">
-
-							<a href="frm_principaladmin.php" class="nav-link active">
-
-								<i class="fas fa-tachometer-alt nav-icon"></i>
-
-								<p>
-
-								Dashboard
-
-								</p>
-
-							</a>
-
-						</li> -->
-
-
-
 						<li class="nav-header"><h6>REPORTES</h6></li>
 
 						<li class="nav-item">
 
 							<a href="frm_principaladminpanel.php" class="nav-link">
-
-
 
 								<!-- <i class="nav-icon fas fa-cube"></i> -->
 								<div class="d-flex align-items-center">
@@ -227,6 +206,27 @@ if (strlen(session_id()) < 1) {
 								</div>
 								<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
 									Dashboard
+								</p>
+								</div>
+
+
+							</a>
+
+						</li>
+
+						<li class="nav-item">
+
+							<a href="frm_principaladmindashboard.php" class="nav-link">
+
+
+
+								<!-- <i class="nav-icon fas fa-cube"></i> -->
+								<div class="d-flex align-items-center">
+								<div class="image">
+									<img src="../public/imagenes/analisis-de-datos.png" class="img-circle elevation-2" alt="User Image" style="max-width: 34px; height: auto;">
+								</div>
+								<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
+									Rep. Power-By
 								</p>
 								</div>
 
