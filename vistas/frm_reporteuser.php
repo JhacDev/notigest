@@ -26,6 +26,10 @@ if (!isset($_SESSION['email_usuario'])) {
 	background-color: #175B27; /* Color de fondo de la cabecera */ 
 	color: white; /* Color del texto de la cabecera */ 
 } 
+#tablareporte {
+    display: none; /* Oculta la sección de la tabla inicialmente */
+}
+
 </style>
 
 
@@ -45,7 +49,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 						<div class="col-sm-12">
 
-							<h1>Sistema de la notificación a la gestante - <b>NOTIGEST</b> - Red - <b><?php echo $_SESSION["red"]; ?></b> - Microred - <b><span id="dataMicroRed"></span></b> </h1>
+							<h1 class="text-center">Padron de Gestantes - Red - <b><?php echo $_SESSION["red"]; ?></b> - Microred - <b><span id="dataMicroRed"></span></b> </h1>
 
 						</div>
 
@@ -70,7 +74,7 @@ if (!isset($_SESSION['email_usuario'])) {
 						<h3 class="card-title">Bienvenido: <b id="nombre_estilo"><i class="fa fa-user"></i> <?php echo $_SESSION["tipousuario"]; ?></b></h3>
 
 					</div>
-
+					<!-- 
 					<div class="card-body">
 
 						<div class="col-12">
@@ -82,7 +86,6 @@ if (!isset($_SESSION['email_usuario'])) {
 									<div class="row">
 
 										<img src="../public/imagenes/logo.png" class="round mx-auto d-block" alt="Responsive image" id="imagen" width="180" height="100">
-
 
 									</div>
 
@@ -98,7 +101,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 						</div>
 
-					</div>
+					</div> -->
 
 					<!-- /.card-body -->
 
@@ -107,69 +110,48 @@ if (!isset($_SESSION['email_usuario'])) {
 				<!-- /.card -->
 
 			</section>
+			
+			<section class="content" id="reporte_user"> 
 
-			<section class="content">
+				<div class="col-md-3">
 
-				<div class="container-fluid px-4">
+					<div class="card card-info card-outline">
 
-					<!-- <h1 class="mt-4">DASHBOARD</h1> -->
+						<div class="card-header">						
 
-					<div class="card mb-4">
+							<h3 class="card-title">
 
-						<div class="card-header">
+								<i class="fas fa-search"></i>
 
-							<i class="fas fa-table me-1"></i>
+								Reporte
 
-							REPORTE NOMINAL GESTANTES AÑO ACTUAL MICRORED 
+							</h3>
 
 						</div>
 
-						<div class="card-body border-2">
+						<div class="card-body">
 
-							<table id="tblistado_gest" class="table table-hover table-bordered">
-								<thead>
+							<form method="gest" class="form-horizontal" id="frm_buscar" name="frm_buscar" enctype="multipart/form-data">
 
-									<tr>
+								<div class="row">
 
-										<th style="width: 3%;">Red</th>
+									<div class="row" id="datos_genreporte">
 
-										<th style="width: 3%;">Microred</th>
+										<div class="col-xs-12 col-md-12 col-lg-12">
 
-										<th style="width: 3%;">Ipress</th>
+											<div class="form-group">
 
-										<th style="width: 3%;">Fecha de Registro</th>
+												<button type="button" class="btn btn-block btn-info" id="btn_general_reporte">Generar</button>
 
-										<th style="width: 3%;">Documento</th>
+											</div>
 
-										<th style="width: 3%;">Apellidos y Nombres</th>
+										</div>
 
-										<th style="width: 3%;">Edad</th>
+									</div>
 
-										<th style="width: 3%;">Eg Actual</th>
+								</div>							
 
-										<th style="width: 3%;">Nro Celular</th>
-
-										<th style="width: 3%;">Fecha de Atencion</th>
-
-										<th style="width: 3%;">Fecha Probable de Parto</th>
-
-										<th style="width: 3%;">Fecha Termino</th>
-
-										<th style="width: 3%;">Desc Termino</th>
-
-										<th style="width: 3%;">Desc Riesgo</th>
-
-										<th style="width: 3%;">Desc Lugar Termino</th>
-
-									</tr>
-
-								</thead>
-
-								<tbody>
-
-								</tbody>
-
-							</table>
+							</form>
 
 						</div>
 
@@ -178,9 +160,118 @@ if (!isset($_SESSION['email_usuario'])) {
 				</div>
 
 			</section>
+			<!-- Spinner de carga -->
+			<div id="spinner" style="display: none; text-align: center;">
+				<div class="spinner-border text-primary" role="status">
+					<span class="sr-only">Cargando...</span>
+				</div>
+				<p>Cargando datos, por favor espere...</p>
+			</div>
+			<section class="content" id="tablareporte">
 
-			<!-- /.content -->
+				<div class="container-fluid">
 
+
+					<div class="card mb-2">
+
+						<div class="card-header">
+
+							<i class="fas fa-table me-1"></i>
+
+							REPORTE NOMINAL GESTANTES AÑO ACTUAL MICRORED 
+						</div>
+						<div class="table-responsive">
+							<div class="panel-body">
+
+								<table id="tblistado_gest" class="table table-bordered table-hover dataTable dtr-inline">
+									<thead>
+									<th class="text-end" style="width: 5%;">Red</th>
+											<th style="width: 3%;">Microred</th>
+											<th style="width: 3%;">Código renaes</th>
+											<th style="width: 3%;">Ipress</th>
+											<th style="width: 3%;">Categoria</th>
+											<th style="width: 3%;">SE</th>
+											<th style="width: 3%;">Fecha de primera atención</th>
+											<th style="width: 3%;">Apellido paterno</th>
+											<th style="width: 3%;">Apellido materno</th>
+											<th style="width: 4%;">Nombres</th>
+											<th style="width: 3%;">Número de documento</th>
+											<th style="width: 3%;">Fecha de nacimiento</th>
+											<th style="width: 3%;">Edad</th>
+											<th style="width: 3%;">Fecha ultima de mestruación (FUM)</th>
+											<th style="width: 3%;">Fecha probable de parto (FPP)</th>
+											<th style="width: 3%;">Edad gest. captada</th>
+											<th style="width: 3%;">Celular gestante</th>
+											<th style="width: 3%;">Departamento</th>
+											<th style="width: 3%;">Provincia</th>
+											<th style="width: 3%;">Distrito</th>
+											<th style="width: 3%;">Centro poblado</th>
+											<th style="width: 3%;">Altitud</th>
+											<th style="width: 3%;">Dirección</th>
+											<th style="width: 3%;">HB valor Observado</th>
+											<th style="width: 3%;">HB valor Ajustado</th>
+											<th style="width: 3%;">Grupo sanguíneo</th>
+											<th style="width: 3%;">Factor RH</th>
+											<th style="width: 3%;">Factor de riesgo</th>
+											<th style="width: 3%;">Tamizaje VIF</th>
+											<th style="width: 3%;">Edad gest. actual</th>
+											<th style="width: 3%;">Fecha de termino</th>
+											<th style="width: 3%;">Termino</th>
+											<th style="width: 3%;">Lugar de termino</th>
+											<th style="width: 3%;">Observación de la red</th>
+											<th style="width: 3%;">Observación de la diresa</th>
+											<th style="width: 3%;">Doc Profesional</th>
+											<th style="width: 3%;">Nombres Profesional</th>
+											<th style="width: 3%;">Celular Profesional</th>
+									</thead>
+									<tbody>
+									</tbody>
+									<tfoot>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+										<th></th>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 
 	<?php
@@ -205,8 +296,17 @@ if (!isset($_SESSION['email_usuario'])) {
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="scripts/panelUser.js"></script>
+	<script>
+				document.getElementById('btn_general_reporte').addEventListener('click', function() {
+			// Mostrar el spinner
+			ListarGest()
+			// Ocultar la tabla y otra sección inicialmente
+			document.getElementById('tablareporte').style.display = 'none';
+			document.getElementById('reporte_user').style.display = 'none';
+			document.getElementById('tablareporte').style.display = 'block';		
+		});
 
-
+	</script>
 
 <?php
 

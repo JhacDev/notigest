@@ -133,7 +133,7 @@ if (strlen(session_id()) < 1) {
 
 				<img src="../public/imagenes/logo_diresapuno2.png" alt="SedisPuno Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 
-				<span class="brand-text font-weight-light">NOTIGEST </span>
+				<span class="brand-text font-weight-light">SISTEMA NOTIGEST </span>
 
 			</a>
 

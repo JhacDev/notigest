@@ -89,7 +89,7 @@ function init() {
   showMicroRed();
 
   Listar();
-  ListarGest();
+  // ListarGest();
 
 }
 
@@ -787,7 +787,6 @@ const countRegisterdiaMes = async () => {
 
 
 
-
 /*===========================================================
 	= caso nomina de gestantes año actual  red y mirocred     =
 	===========================================================*/
@@ -960,6 +959,8 @@ const countRegisterdiaMes = async () => {
   
   }
   
+
+
 /*==========================================
 	= caso gestantes con fpp en el mes actual=
 	==========================================*/

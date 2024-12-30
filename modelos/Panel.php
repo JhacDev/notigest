@@ -257,8 +257,9 @@ class Panel
 
     {
     
-        return ejecutarConsulta("SELECT red,microred,ipress,CAST(fecha_registro AS DATE) AS fecha_registro,num_documento, CONCAT(ape_paterno, ' ', ape_materno,' ',nombres) AS NombreApellido,edad,eg_actual,cel_gestfamiliar,fecha_atencion, fpp AS Fecha_PP,
-        fecha_termino,termino,factor_riesgo,lugar_termino FROM tb_registro WHERE red='$red' and YEAR(fecha_registro) = YEAR(NOW()) ORDER BY fecha_registro DESC,  red asc,microred asc,ipress asc;");
+        return ejecutarConsulta("SELECT  rn.red, rn.microred, rn.cod_ipress, rn.ipress, rn.categoria, rn.se, rn.fecha_atencion,rn.ape_paterno, rn.ape_materno,rn.nombres, rn.num_documento, rn.fecha_nacimiento, rn.edad, rn.fum, rn.fpp, rn.eg_captada, rn.cel_gestfamiliar, u.numtele_usuario, u.email_usuario,rn.departamento,rn.provincia,rn.distrito,rn.centro_poblado,rn.altitud, rn.direccion, rn.hb_ajustado,rn.hb_altitud, rn.grupo_sanguineo, rn.factor_rh, rn.factor_riesgo, rn.tamizaje_vif, rn.eg_actual, IF(rn.fecha_termino <> '', rn.fecha_termino, '') AS fecha_termino, IF(rn.termino <> '', rn.termino, '') AS termino, IF(rn.lugar_termino <> '', rn.lugar_termino, '') AS lugar_termino, rn.obs_red, rn.obs_diresa, rn.fecha_registro, u.numdoc_usuario, u.apenom_usuario, numtele_usuario FROM tb_registro rn 
+INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario where rn.red='$red'
+ORDER BY rn.fecha_registro DESC;");
     }
         // CONSULTA PARA OBTENER DATOS DE GESTANTE POR AÑO ACTUAL POR RED
 
@@ -266,8 +267,9 @@ class Panel
 
     {
     
-        return ejecutarConsulta("SELECT red,microred,ipress,CAST(fecha_registro AS DATE) AS fecha_registro,num_documento, CONCAT(ape_paterno, ' ', ape_materno,' ',nombres) AS NombreApellido,edad,eg_actual,cel_gestfamiliar,fecha_atencion, fpp AS Fecha_PP,
-        fecha_termino,termino,factor_riesgo,lugar_termino FROM tb_registro WHERE red='$red' and microred='$microred' and YEAR(fecha_registro) = YEAR(NOW()) ORDER BY fecha_registro DESC,  red asc,microred asc,ipress asc;");
+        return ejecutarConsulta("SELECT  rn.red, rn.microred, rn.cod_ipress, rn.ipress, rn.categoria, rn.se, rn.fecha_atencion,rn.ape_paterno, rn.ape_materno,rn.nombres, rn.num_documento, rn.fecha_nacimiento, rn.edad, rn.fum, rn.fpp, rn.eg_captada, rn.cel_gestfamiliar, u.numtele_usuario, u.email_usuario,rn.departamento,rn.provincia,rn.distrito,rn.centro_poblado,rn.altitud, rn.direccion, rn.hb_ajustado,rn.hb_altitud, rn.grupo_sanguineo, rn.factor_rh, rn.factor_riesgo, rn.tamizaje_vif, rn.eg_actual, IF(rn.fecha_termino <> '', rn.fecha_termino, '') AS fecha_termino, IF(rn.termino <> '', rn.termino, '') AS termino, IF(rn.lugar_termino <> '', rn.lugar_termino, '') AS lugar_termino, rn.obs_red, rn.obs_diresa, rn.fecha_registro, u.numdoc_usuario, u.apenom_usuario, numtele_usuario FROM tb_registro rn 
+INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario where rn.red='$red' AND rn.microred='$microred'
+ORDER BY rn.fecha_registro DESC;");
     }
 
     // CONSULTA PARA OBTENER DATOS GESTANTE CON FECHA DE PARTO EN EL MES RED
