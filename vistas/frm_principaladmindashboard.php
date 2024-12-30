@@ -37,7 +37,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 						<div class="col-sm-12">
 
-							<h1 class="">Sistema de la notificación a la gestante - <b>NOTIGEST</b></h1>
+							<h1 class=""> Reporte en Power By - <b>PANEL DINAMICO DE GESTANTES A NIVEL DE LA REGION</b></h1>
 
 						</div>
 

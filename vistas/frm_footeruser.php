@@ -6,7 +6,7 @@
 
 
 
-				<b>Version</b> 2.0.0
+				<b>Version</b> 3.0.0
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-			<strong>Copyright &copy; 2023. <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> Todos los derechos reservados.
+			<strong>Copyright &copy; 2024. <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> Todos los derechos reservados.
 
 
 
