@@ -374,7 +374,8 @@ function RptGeneralNotigest() {
 
             title: 'Notificación de Gestantes - NOTIGEST'
 
-        }, {
+        }, 
+        {
 
             extend:    'excelHtml5',
 
@@ -795,7 +796,8 @@ function RptGeneralNotigest() {
 
             }]            
 
-        }, {
+        }, 
+        {
 
             extend:    'csvHtml5',
 
