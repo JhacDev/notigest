@@ -193,6 +193,8 @@ if (!isset($_SESSION['email_usuario'])) {
 
 							<th style="width: 15%;">Usuario</th>
 
+							<th style="width: 15%;">Numero de telefono</th>
+
 							<th style="width: 7%;">Estado</th>
 
 						</thead>
@@ -202,6 +204,8 @@ if (!isset($_SESSION['email_usuario'])) {
 						</tbody>
 
 						<tfoot>
+							
+							<th></th>
 
 							<th></th>
 

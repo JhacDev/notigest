@@ -328,23 +328,18 @@ switch ($_GET['op']) {
 
 			"3"	=>	$reg->apenom_usuario,
 
-
-
 			"4"	=>	$reg->red,
 
 			"5"=> $reg->descripcion_microred,
 
-
-
 			"6"	=>	$reg->tipousuario,
-
-
 
 			"7"	=>	$reg->usuario_sistema,
 
+			"8"=> $reg->numtele_usuario,
 
 
-			"8"	=>	($reg->estado) ? '<span class="badge bg-danger">Desactivado</span>' : '<span class="badge bg-success">Activado</span>'
+			"9"	=>	($reg->estado) ? '<span class="badge bg-danger">Desactivado</span>' : '<span class="badge bg-success">Activado</span>'
 
 
 
