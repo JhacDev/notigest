@@ -187,6 +187,8 @@ if (!isset($_SESSION['email_usuario'])) {
 
 							<th style="width: 15%;">Red</th>
 
+							<th style="width: 15%;">Microred</th>
+
 							<th style="width: 10%;">Tipo de usuario</th>
 
 							<th style="width: 15%;">Usuario</th>
@@ -200,6 +202,8 @@ if (!isset($_SESSION['email_usuario'])) {
 						</tbody>
 
 						<tfoot>
+
+							<th></th>
 
 							<th></th>
 
