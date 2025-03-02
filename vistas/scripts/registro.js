@@ -2346,7 +2346,50 @@ function Guardaryeditar(e) {
 
 
 
-                                                                                            } else {
+                                                                                            } 
+                                                                                            if ($("#departamento option:selected").text() == "SELECCIONE" || $("#departamento option:selected").text() == "") {
+
+
+
+                                                                                                bootbox.alert({
+                                            
+                                            
+                                            
+                                                                                                    message: "Seleccione el departamento.",
+                                            
+                                            
+                                            
+                                                                                                    className: 'rubberBand animated',
+                                            
+                                            
+                                            
+                                                                                                    onEscape: function () {
+                                            
+                                            
+                                            
+                                                                                                        $('.bootbox.modal').modal('hide');
+                                            
+                                            
+                                            
+                                                                                                    }
+                                            
+                                            
+                                            
+                                                                                                }).on('hidden.bs.modal', function (event) {
+                                            
+                                            
+                                            
+                                                                                                    $("#departamento").focus().select();
+                                            
+                                            
+                                            
+                                                                                                });
+                                            
+                                            
+                                            
+                                                                                            } else
+                                                                                            
+                                                                                            {
 
 
 
@@ -2603,17 +2646,13 @@ function Mostrar(id_registro) {
 
 
         $("#cel_gestfamiliar").val(data.cel_gestfamiliar);
+        
+        var departamento= data.departamento;
+        console.log(departamento);
 
-
-
-        // agregamos variables
-
-        $("#departamento").val(data.departamento).trigger('change.select2');
-
-
-
+        $('#departamento').val(data.departamento).trigger('change.select2');
+        
         $("#provincia").val(data.provincia).trigger('change.select2');
-
 
 
         $("#distrito").val(data.distrito).trigger('change.select2');

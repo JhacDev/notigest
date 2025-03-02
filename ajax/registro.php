@@ -284,7 +284,7 @@ switch ($_GET['op']) {
 
 
 
-			$rspta = $datos->editarNotigest($id_registro, strtoupper($red), strtoupper($microred), $cod_ipress, strtoupper($ipress), $categoria, $se, $fecha_atencion, strtoupper($ape_paterno), strtoupper($ape_materno), strtoupper($nombres), $num_documento, $fecha_nacimiento, $edad, $fum, $fpp, $eg_captada, $cel_gestfamiliar, $departamentoInsert, $provinciaInsert, $distritoInsert, $centro_poblado, $altitud, strtoupper($direccion), $hb_ajustado, $hb_altitud, $grupo_sanguineo, $factor_rh,$peso,$condicion_ges, strtoupper($origen),$factor_riesgo, strtoupper($tamizaje_vif), $eg_actual, $fecha_termino, $termino, $lugar_termino, strtoupper($obs_red), strtoupper($obs_diresa), $id_usuario);
+			$rspta = $datos->editarNotigest($id_registro, strtoupper($red), strtoupper($microred), $cod_ipress, strtoupper($ipress), $categoria, $se, $fecha_atencion, strtoupper($ape_paterno), strtoupper($ape_materno), strtoupper($nombres), $num_documento, $fecha_nacimiento, $edad, $fum, $fpp, $eg_captada, $cel_gestfamiliar, $departamentoInsert, $provinciaInsert, $distritoInsert, $centro_poblado, $altitud, strtoupper($direccion), $hb_ajustado, $hb_altitud, $grupo_sanguineo, $factor_rh,$peso,$condicion_ges, strtoupper($origen),$factor_riesgo, strtoupper($tamizaje_vif), $eg_actual, $fecha_termino, $termino, $lugar_termino, strtoupper($obs_red), strtoupper($obs_diresa));
 
 
 
@@ -308,13 +308,9 @@ switch ($_GET['op']) {
 
 		$rspta = $datos->showMicroREd($microredSession);
 
-
-
 		echo json_encode($rspta);
 
 		break;
-
-
 
 /*==================================================
 

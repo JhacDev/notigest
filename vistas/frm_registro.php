@@ -372,17 +372,12 @@ if (!isset($_SESSION['email_usuario'])) {
 
 															<div class="row">
 
-																<div class="col-xs-12 col-md-12 col-lg-12">
-
-																	<div class="form-group">
-
-																		<label for="departamento">Departamento</label>
-
-																		<select onchange="cargar_provincias()" class="form-control select2" id="departamento" name="departamento" data-placeholder="SELECCIONE" style="width: 100%;"></select>
-
-																	</div>
-
+															<div class="col-xs-12 col-md-12 col-lg-12">
+																<div class="form-group">
+																	<label for="departamento">Departamento</label>
+																	<select onchange="cargar_provincias()" class="custom-select form-control select2" id="departamento" name="departamento" data-placeholder="SELECCIONE" style="width: 100%;"></select>
 																</div>
+															</div>
 
 															</div>
 
@@ -396,7 +391,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 																		<label for="provincia">Provincia</label>
 
-																		<select onchange="carga_distritos()" class="form-control select2" id="provincia" name="provincia" data-placeholder="SELECCIONE" style="width: 100%;"></select>
+																		<select onchange="carga_distritos()" class="custom-select form-control select2" id="provincia" name="provincia" data-placeholder="SELECCIONE" style="width: 100%;"></select>
 
 																	</div>
 
@@ -414,7 +409,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 																		<label for="distrito">Distrito</label>
 
-																		<select onchange="carga_centropoblados()" class="form-control select2" id="distrito" name="distrito" data-placeholder="SELECCIONE" style="width: 100%;"></select>
+																		<select onchange="carga_centropoblados()" class="custom-select form-control select2" id="distrito" name="distrito" data-placeholder="SELECCIONE" style="width: 100%;"></select>
 
 																	</div>
 
@@ -736,7 +731,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 																<div class="form-group">
 
-																	<label for="condicion_ges">Origen</label>
+																	<label for="origen">Origen</label>
 
 																	<input type="text" class="form-control" id="origen" name="origen" placeholder="ORIGEN" maxlength="30" style="text-transform: uppercase; width:100%">
 
@@ -945,7 +940,6 @@ if (!isset($_SESSION['email_usuario'])) {
 
 
 	<script type="text/javascript" src="scripts/registro.js"></script>
-
 
 
 <?php
