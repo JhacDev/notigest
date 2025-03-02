@@ -60,6 +60,7 @@ if (strlen(session_id()) < 1) {
 	<link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
 
 	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../public/estilos/navbar.css">
 
 </head>
 
@@ -125,7 +126,7 @@ if (strlen(session_id()) < 1) {
 
 		<!-- Main Sidebar Container -->
 
-		<aside class="main-sidebar sidebar-dark-info elevation-4">
+		<aside class="main-sidebar sidebar-dark-info elevation-4" id="menu">
 
 			<!-- Brand Logo -->
 

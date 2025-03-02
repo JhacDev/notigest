@@ -4,6 +4,7 @@
   box-sizing: border-box;
   
 }
+
 body {
   font-family: "Roboto", sans-serif;
   background: #06beb6; /* fallback for old browsers */
@@ -17,7 +18,17 @@ body {
     #FFCDCC,
     #ebd3d3  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+#color_base {
+    background-color: #A01212;
+    color: white;
+}
+#login_border{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
 .container{
     width: 600px;
     position: relative;

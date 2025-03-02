@@ -56,6 +56,7 @@ if (strlen(session_id()) < 1) {
 	<!-- Theme style -->
 
 	<link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
+	<link rel="stylesheet" href="../public/estilos/navbar.css">
 
 </head>
 
@@ -119,7 +120,7 @@ if (strlen(session_id()) < 1) {
 
 		<!-- Main Sidebar Container -->
 
-		<aside class="main-sidebar sidebar-dark-info elevation-4">
+		<aside class="main-sidebar sidebar-dark-info elevation-4" id="menu">
 
 			<!-- Brand Logo -->
 
@@ -139,7 +140,7 @@ if (strlen(session_id()) < 1) {
 
 				<!-- Sidebar usuario -->
 
-				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+				<!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
 					<div class="image">
 
@@ -153,7 +154,7 @@ if (strlen(session_id()) < 1) {
 
 					</div>
 
-				</div>
+				</div> -->
 
 
 

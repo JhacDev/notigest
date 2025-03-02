@@ -59,6 +59,7 @@ if (strlen(session_id()) < 1) {
 	<!-- Theme style -->
 
 	<link rel="stylesheet" href="../public/dist/css/adminlte.min.css">
+	<link rel="stylesheet" href="../public/estilos/navbar.css">
 
 </head>
 
@@ -124,7 +125,7 @@ if (strlen(session_id()) < 1) {
 
 		<!-- Main Sidebar Container -->
 
-		<aside class="main-sidebar sidebar-dark-info elevation-4">
+		<aside class="main-sidebar sidebar-dark-info elevation-4" id="menu">
 
 			<!-- Brand Logo -->
 
@@ -164,7 +165,7 @@ if (strlen(session_id()) < 1) {
 
 				<!-- SidebarSearch Form -->
 
-				<div class="form-inline">
+				<!-- <div class="form-inline">
 
 					<div class="input-group" data-widget="sidebar-search">
 
@@ -182,7 +183,7 @@ if (strlen(session_id()) < 1) {
 
 					</div>
 
-				</div>
+				</div> -->
 
 
 
@@ -245,7 +246,7 @@ if (strlen(session_id()) < 1) {
 									<img src="../public/imagenes/el-embarazo_64.png" class="img-circle elevation-2" alt="User Image" style="max-width: 34px; height: auto;">
 								</div>
 								<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
-									Padron de Gestantes
+									Padron Gest.
 								</p>
 								</div>
 
@@ -280,7 +281,7 @@ if (strlen(session_id()) < 1) {
 									<img src="../public/imagenes/usuario_64.png" class="img-circle elevation-2" alt="User Image" style="max-width: 34px; height: auto;">
 								</div>
 								<p class="mb-0 ms-2"> <!-- mb-0 elimina el margen inferior, ms-2 añade un margen izquierdo -->
-									Gestion de Usuario
+									Crear Usuario
 								</p>
 								</div>
 

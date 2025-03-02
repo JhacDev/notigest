@@ -46,11 +46,11 @@
 
     <div class="login-box">
 
-        <div class="card card-outline-tabs card-danger">
+        <div class="card card-outline-tabs row">
 
-            <div class="card-header text-center">
+            <div class="card-header text-center" id="color_base">
 
-                <div class="">
+                <div class="col-md-12">
 
                     <img src="../public/imagenes/logo.png" class="round mx-auto d-block" alt="Responsive image" id="imagen">
 
@@ -63,12 +63,8 @@
 
             </div>
 
-            <div class="card-body">
-
+            <div class="card-body col-md-12">
                 <h4 class="login-box-msg text-dark"><b>Inciar sesión</b></h4>
-
-
-
                 <form method="post" id="frmAcceso">
 
                     <div class="input-group mb-3">
@@ -89,7 +85,7 @@
 
                     <div class="input-group mb-3">
 
-                        <input type="password" class="form-control" id="clavea" name="clavea" placeholder="Password" maxlength="20" onkeypress="validarEnter(event);">
+                        <input type="password" class="form-control" id="clavea" name="clavea" placeholder="Contraseña" maxlength="20" onkeypress="validarEnter(event);">
 
                         <div class="input-group-append">
 
