@@ -25,6 +25,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 
 <link rel="stylesheet" href="../public/estilos/usuario.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
 
@@ -42,7 +43,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 				<div class="col-sm-12">
 
-					<h1>Usuarios del sistema</h1>
+					<h1 class="text-center text-bold text-dark">GESTION DE USUARIOS</h1>
 
 				</div>
 
@@ -63,9 +64,10 @@ if (!isset($_SESSION['email_usuario'])) {
 						<div class="card bg-primary text-white mb-4">
 
 							<div class="card-body fs-5">Total de Usuarios</div>
-
+							<div class="d-flex align-items-center justify-content-center ms-3 fs-4">
+							<i class="fa-solid fa-users"></i>
 							<div class="ms-3 fs-4" id="totalUser" ></div>
-
+							</div>
 							<div class="card-footer d-flex align-items-center justify-content-between">
 
 								<!-- <a class="small text-white stretched-link" href="#">View Details</a> -->
@@ -82,10 +84,11 @@ if (!isset($_SESSION['email_usuario'])) {
 
 						<div class="card bg-warning text-white mb-4">
 
-							<div class="card-body fs-5">Total de Administradores</div>
-
+							<div class="card-body fs-5">Tota Administradores</div>
+							<div class="d-flex align-items-center justify-content-center ms-3 fs-4">
+							<i class="fa-solid fa-user-plus"></i>
 							<div class="ms-3 fs-4" id="totalAdmin"></div>
-
+							</div>
 							<div class="card-footer d-flex align-items-center justify-content-between">
 
 								<!-- <a class="small text-white stretched-link" href="#">View Details</a> -->
@@ -102,15 +105,13 @@ if (!isset($_SESSION['email_usuario'])) {
 
 						<div class="card bg-success text-white mb-4">
 
-							<div class="card-body fs-5">Total de Usuarios Activos</div>
-
+							<div class="card-body fs-5">Total Usuario Activo</div>
+							<div class="d-flex align-items-center justify-content-center ms-3 fs-4">
+							<i class="fa-regular fa-user"></i>
 							<div class="ms-3 fs-4" id="totaluseractivo"></div>
-
+							</div>
 							<div class="card-footer d-flex align-items-center justify-content-between">
 
-								<!-- <a class="small text-white stretched-link" href="#">View Details</a> -->
-
-								<!-- <div class="small text-white"><i class="fas fa-angle-right"></i></div> -->
 
 							</div>
 
@@ -120,21 +121,19 @@ if (!isset($_SESSION['email_usuario'])) {
 
 					<div class="col-xl-3 col-md-6">
 
-						<div class="card bg-danger text-white mb-4">
-
-							<div class="card-body fs-5">Total de Usuarios Inactivos</div>
-
-							<div class="ms-3 fs-4" id="totalInactivo"></div>
-
-							<div class="card-footer d-flex align-items-center justify-content-between">
-
-								<!-- <a class="small text-white stretched-link" href="#">View Details</a> -->
-
-								<!-- <div class="small text-white"><i class="fas fa-angle-right"></i></div> -->
-
-							</div>
-
+					<div class="card bg-danger text-white mb-4">
+						<div class="card-body fs-5">Total Usuario Inactivo</div>
+						
+						<!-- Contenedor para el total de usuarios inactivos con icono -->
+						<div class="d-flex align-items-center justify-content-center ms-3 fs-4">
+							<i class="fas fa-user-slash fs-4 me-2"></i> <!-- Icono de usuario inactivo de Font Awesome -->
+							<div id="totalInactivo"></div> <!-- Contenedor para el total de usuarios inactivos -->
 						</div>
+
+						<div class="card-footer d-flex align-items-center justify-content-between">
+							<!-- Footer de la tarjeta -->
+						</div>
+					</div>
 
 					</div>
 

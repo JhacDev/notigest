@@ -2647,14 +2647,28 @@ function Mostrar(id_registro) {
 
         $("#cel_gestfamiliar").val(data.cel_gestfamiliar);
         
-        var departamento= data.departamento;
-        console.log(departamento);
-
-        $('#departamento').val(data.departamento).trigger('change.select2');
+        // $('#departamento').val(data.departamento).trigger('change.select2');
+        let combo = document.getElementById("departamento");
+        let m_departamento = data.departamento;
+        let select_departamento = new Option(` ${m_departamento}`, m_departamento);
+        combo.add(select_departamento);
+        combo.value = m_departamento;
+        console.log(select_departamento);
         
-        $("#provincia").val(data.provincia).trigger('change.select2');
 
+        
+        // $("#provincia").val(data.provincia).trigger('change.select2');
 
+        let combo_p = document.getElementById("provincia");
+        let m_provincia = data.provincia;
+        console.log(m_provincia);
+        let select_provincia = new Option(`${m_provincia}`, m_provincia);
+        combo_p.add(select_provincia);
+        combo_p.value = m_provincia;
+
+        console.log(select_provincia);
+
+        
         $("#distrito").val(data.distrito).trigger('change.select2');
 
         

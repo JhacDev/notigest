@@ -391,7 +391,7 @@ if (!isset($_SESSION['email_usuario'])) {
 
 																		<label for="provincia">Provincia</label>
 
-																		<select onchange="carga_distritos()" class="custom-select form-control select2" id="provincia" name="provincia" data-placeholder="SELECCIONE" style="width: 100%;"></select>
+																		<select onchange="carga_distritos()" class="custom-select form-control select2" id="provincia" name="provincia" placeholder="SELECCIONE" style="width: 100%;"></select>
 
 																	</div>
 

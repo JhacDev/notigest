@@ -75,13 +75,13 @@ if (!isset($_SESSION['email_usuario'])) {
 
 									<div class="row">
 
-										<img src="../public/imagenes/logo.png" class="round mx-auto d-block" alt="Responsive image" id="imagen">
+										<!-- <img src="../public/imagenes/logo.png" class="round mx-auto d-block" alt="Responsive image" id="imagen"> -->
 
 									</div>
 
 									<div class="row" style="text-align: center;">
 
-										<h5>Al sistema de la <b id="dis_estilo">Estrategia Sanitaria Salud Sexual y Reproductiva</b> - Dirección Regional de Salud Puno</h5>
+										<h5>sistema de la <b id="dis_estilo">Estrategia Sanitaria Salud Sexual y Reproductiva</b> - Dirección Regional de Salud Puno</h5>
 
 									</div>
 

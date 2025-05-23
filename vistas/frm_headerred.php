@@ -69,8 +69,8 @@ if (strlen(session_id()) < 1) {
 
 
 		<!-- Navbar -->
-
-		<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+		<!-- <nav class="main-header navbar navbar-expand navbar-dark navbar-light"> -->
+		<nav class="main-header navbar navbar-expand navbar-dark" id="menu">
 
 			<!-- Left navbar links -->
 
@@ -140,7 +140,7 @@ if (strlen(session_id()) < 1) {
 
 				<!-- Sidebar usuario -->
 
-				<!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
 					<div class="image">
 
@@ -154,13 +154,13 @@ if (strlen(session_id()) < 1) {
 
 					</div>
 
-				</div> -->
+				</div>
 
 
 
 				<!-- SidebarSearch Form -->
 
-				<div class="form-inline">
+				<!-- <div class="form-inline">
 
 					<div class="input-group" data-widget="sidebar-search">
 
@@ -178,7 +178,7 @@ if (strlen(session_id()) < 1) {
 
 					</div>
 
-				</div>
+				</div> -->
 
 
 
