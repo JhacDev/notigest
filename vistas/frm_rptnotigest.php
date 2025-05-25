@@ -83,6 +83,13 @@ if (!isset($_SESSION['email_usuario'])) {
 										<div class="col-xs-12 col-md-12 col-lg-12">
 
 											<div class="form-group">
+												<!-- <label for="fecha_inicio">Fecha de inicio:</label>
+													<input type="date" id="fecha_inicio" name="fecha_inicio" required>
+													<br><br>
+
+													<label for="fecha_fin">Fecha de fin:</label>
+													<input type="date" id="fecha_fin" name="fecha_fin" required>
+													<br><br> -->
 
 												<button type="button" class="btn btn-block btn-info" id="btn_general_reporte" onclick="generarRptGeneral();">Generar</button>
 

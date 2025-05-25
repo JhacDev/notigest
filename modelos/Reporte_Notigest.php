@@ -31,14 +31,25 @@ class Reporte_Notigest
 	{
 
 		$sql = "SELECT rn.id_registro, rn.red, rn.microred, rn.cod_ipress, rn.ipress, rn.categoria, rn.se, rn.fecha_atencion, rn.ape_paterno, rn.ape_materno, rn.nombres, rn.num_documento, rn.fecha_nacimiento, rn.edad, rn.fum, rn.fpp, rn.eg_captada, rn.cel_gestfamiliar,rn.departamento,rn.provincia,rn.distrito,rn.centro_poblado,rn.altitud, rn.direccion, rn.hb_ajustado,rn.hb_altitud, rn.grupo_sanguineo, rn.factor_rh, rn.factor_riesgo, rn.tamizaje_vif, rn.eg_actual, IF(rn.fecha_termino <> '', rn.fecha_termino, '') AS fecha_termino, IF(rn.termino <> '', rn.termino, '') AS termino, IF(rn.lugar_termino <> '', rn.lugar_termino, '') AS lugar_termino, rn.obs_red, rn.obs_diresa,  u.numdoc_usuario, u.apenom_usuario, numtele_usuario, rn.fecha_registro FROM tb_registro rn 
-
-		INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario
-
-		ORDER BY rn.fecha_registro DESC;";
+				INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario
+				where YEAR(fecha_atencion) = YEAR(CURDATE())
+				ORDER BY rn.fecha_registro DESC;";
 
 		return ejecutarConsulta($sql);
 
 	}
+	// 	public function listarRptGeneralNotigestDiresa($fech_ini,$fech_fin)
+
+	// {
+
+	// 	$sql = "SELECT rn.id_registro, rn.red, rn.microred, rn.cod_ipress, rn.ipress, rn.categoria, rn.se, rn.fecha_atencion, rn.ape_paterno, rn.ape_materno, rn.nombres, rn.num_documento, rn.fecha_nacimiento, rn.edad, rn.fum, rn.fpp, rn.eg_captada, rn.cel_gestfamiliar,rn.departamento,rn.provincia,rn.distrito,rn.centro_poblado,rn.altitud, rn.direccion, rn.hb_ajustado,rn.hb_altitud, rn.grupo_sanguineo, rn.factor_rh, rn.factor_riesgo, rn.tamizaje_vif, rn.eg_actual, IF(rn.fecha_termino <> '', rn.fecha_termino, '') AS fecha_termino, IF(rn.termino <> '', rn.termino, '') AS termino, IF(rn.lugar_termino <> '', rn.lugar_termino, '') AS lugar_termino, rn.obs_red, rn.obs_diresa,  u.numdoc_usuario, u.apenom_usuario, numtele_usuario, rn.fecha_registro FROM tb_registro rn 
+	// 			INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario
+	// 			where fecha_atencion between '$fech_ini' and '$fech_fin'
+	// 			ORDER BY rn.fecha_registro DESC;";
+
+	// 	return ejecutarConsulta($sql);
+
+	// }
 
 
 
@@ -56,7 +67,7 @@ class Reporte_Notigest
 
 		INNER JOIN tb_usuario u ON rn.id_usuario = u.id_usuario
 
-		where u.red='$descripcion_red'
+		where u.red='$descripcion_red'  AND  YEAR(rn.fecha_atencion) = YEAR(CURDATE())
 
 		ORDER BY rn.fecha_registro DESC;";
 
