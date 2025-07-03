@@ -2,7 +2,7 @@
 
 define("DB_HOST","localhost");
 
-define("DB_NAME","dires4yk_bd_notgest_311024");
+define("DB_NAME",value: "dires4yk_bd_notgest_311024");
 
 
 // define("DB_USERNAME","dires4yk_admin_notigest");
