@@ -1,3 +1,4 @@
+	<div>	
 		<footer class="main-footer">
 
 
@@ -13,9 +14,9 @@
 			</div>
 
 
-
-			<strong>Copyright &copy; 2024. <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> Todos los derechos reservados.
-
+		<strong>Copyright &copy; <span id="year"></span>. 
+        <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> 
+        Todos los derechos reservados.
 
 
 		</footer>
@@ -179,7 +180,10 @@
 	<script src="../public/plugins/datatables-buttons-excel-styles/js/buttons.html5.styles.templates.min.js"></script>
 
 
-
+	<script>
+        // Obtiene el año actual y lo inserta en el span con id "year"
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 
 

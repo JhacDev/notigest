@@ -6,7 +6,9 @@
 
 			</div>
 
-			<strong>Copyright &copy; 2024. <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> Todos los derechos reservados.
+			<strong>Copyright &copy; <span id="year"></span>. 
+        <a href="">Estrategia Sanitaria Salud Sexual y Reproductiva - Dirección Regional de Salud Puno</a>.</strong> 
+        Todos los derechos reservados.
 
 		</footer>
 
@@ -92,7 +94,10 @@
 
 	<script src="../public/dist/js/demo.js"></script>
 
-
+	<script>
+        // Obtiene el año actual y lo inserta en el span con id "year"
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 
